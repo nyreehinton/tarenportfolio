@@ -321,7 +321,6 @@ export default function Home() {
         a:hover {
           text-decoration: underline;
         }
-      ` } < /style> < /
-        >
+      ` } < /style> < / >
     );
 }
