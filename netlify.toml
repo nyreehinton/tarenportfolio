@@ -1,0 +1,12 @@
+[build]
+  # The directory where your site is located
+  publish = "/"
+  
+  # No build command needed for a simple static site
+  command = ""
+
+# Optional: Configure redirects if needed
+# [[redirects]]
+#  from = "/*"
+#  to = "/index.html"
+#  status = 200 
