@@ -142,7 +142,9 @@
     <header>
         <!-- Profile Image Section -->
         <div class="profile-container">
-            <img src="./images/headshot.jpeg" alt="Taren Mansfield" class="profile-image">
+            <img src="https://via.placeholder.com/200x200" alt="Taren Mansfield" class="profile-image">
+            <!-- Fallback local image -->
+            <img src="./images/profile.jpg" alt="Taren Mansfield" class="profile-image" style="display:none;" onload="this.style.display='block'; this.previousElementSibling.style.display='none';">
         </div>
         <h1>TAREN MANSFIELD</h1>
     </header>
