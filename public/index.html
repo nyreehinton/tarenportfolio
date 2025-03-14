@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taren - Writer & Consultant</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Configure Tailwind with custom settings -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#18181B', // Dark gray/almost black
+                        secondary: '#71717A', // Medium gray
+                        accent: '#F4F4F5', // Light gray
+                        light: '#FFFFFF',
+                        dark: '#18181B'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Inter', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                    }
+                },
+            },
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body class="bg-white text-dark font-sans antialiased">
+    <!-- Header/Navigation - Minimal and fixed -->
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tight">Taren</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#about" class="hover:text-primary/70 transition-colors text-sm font-medium">About</a></li>
+                    <li><a href="#work" class="hover:text-primary/70 transition-colors text-sm font-medium">Work</a></li>
+                    <li><a href="#services" class="hover:text-primary/70 transition-colors text-sm font-medium">Services</a></li>
+                    <li><a href="#well-written" class="hover:text-primary/70 transition-colors text-sm font-medium">Well-Written</a></li>
+                    <li><a href="#contact" class="hover:text-primary/70 transition-colors text-sm font-medium">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="py-32 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-6xl md:text-7xl font-bold mb-8 tracking-tight">Leave it to Taren</h1>
+                <p class="text-xl md:text-2xl text-secondary mb-16 max-w-2xl mx-auto leading-relaxed">
+                    Writer and consultant bridging creativity and marketing: I don't just tell stories, I deliver results that showcase your unique vision.
+                </p>
+                <div class="rounded-3xl overflow-hidden mb-16 mx-auto max-w-3xl shadow-lg relative bg-accent">
+                    <!-- Hero image or video placeholder -->
+                    <img src="/images/PNG image.jpeg" alt="Taren's professional headshot" class="w-full">
+                    <!-- Play button overlay for video option -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-100 hover:opacity-90 transition-opacity bg-black bg-opacity-30">
+                        <button onclick="openVideoModal()" class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                            <i class="fas fa-play text-primary text-3xl"></i>
+                        </button>
+                    </div>
+                </div>
+                <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors text-sm">
+                    Let's Connect
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-32 px-6 bg-accent">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-16 text-center tracking-tight">About Me</h2>
+
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <p class="text-lg text-secondary leading-relaxed mb-6">
+                            I was born and raised in St. Paul, Minnesota. I've always loved television, film, and most of all storytelling. I started my journey in Hollywood as an intern on one of my all-time favorite television shows, <em>How to Get Away with Murder</em>.
+                        </p>
+                        <p class="text-lg text-secondary leading-relaxed mb-6">
+                            Since my time at Shondaland, I have worked at HBO Max, Apple TV+, and NBCUniversal learning the landmarks of TV development and the intricacies on the writing and production side.
+                        </p>
+                        <p class="text-lg text-secondary leading-relaxed">
+                            As a marketing consultant, I create professional and unique pitch decks that showcase the unique worlds of my clients. I am continuously passionate about writing and creating stories based in drama, comedy, science-fiction, and young-adult.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="rounded-3xl overflow-hidden shadow-lg">
+                            <img src="/images/PNG-image.jpg" alt="Taren profile" class="w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section id="work" class="py-24 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-12 text-center">Featured Work</h2>
+
+                <!-- The Pace Camp Project -->
+                <div class="mb-20">
+                    <div class="rounded-2xl overflow-hidden mb-8 shadow-lg">
+                        <img src="/images/The-Pace-Pitch-Deck.jpg" alt="The Pace Camp Pitch Deck" class="w-full">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">The Pace Camp 2024</h3>
+                    <p class="text-gray-600 mb-6">A professional pitch deck for a youth soccer camp featuring dynamic visuals on artificial turf backgrounds.</p>
+                    <a href="#" class="text-primary font-medium flex items-center hover:underline">
+                        View Project <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Additional Projects in Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">HBO Max Development</h3>
+                        <p class="text-secondary mb-4">Television development project focused on young adult drama series.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:text-primary/70 transition-colors text-sm">
+                            Learn More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm">
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Screenplay: New Horizons</h3>
+                        <p class="text-secondary mb-4">Science fiction screenplay exploring themes of identity in a tech-driven future.</p>
+                        <a href="#" class="text-primary font-medium flex items-center hover:text-primary/70 transition-colors text-sm">
+                            Learn More <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-32 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-16 text-center tracking-tight">Portfolio Highlights</h2>
+
+                <!-- Sisters Pitch Deck -->
+                <div class="mb-24">
+                    <div class="bg-accent p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold mb-6 tracking-tight">Sisters Pitch Deck</h3>
+                        <div class="relative rounded-2xl overflow-hidden mb-6">
+                            <img src="/images/3A79350B-9157-420A-AFAC-4AA9DB104CB7.JPG" alt="Sisters Pitch Deck Preview" class="w-full">
+                            <button onclick="openSistersPitchVideo()" class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 hover:bg-opacity-40 transition-all">
+                                <span class="bg-white p-4 rounded-full hover:scale-110 transition-transform">
+                                    <i class="fas fa-play text-primary text-3xl"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <p class="text-secondary">An engaging pitch deck presentation showcasing the story and vision behind Sisters.</p>
+                    </div>
+                </div>
+
+                <!-- The Pace Pitch Deck -->
+                <div class="mb-24">
+                    <div class="bg-accent p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold mb-6 tracking-tight">The Pace Camp</h3>
+                        <div class="rounded-2xl overflow-hidden mb-6">
+                            <img src="/images/The Pace Pitch Deck.png" alt="The Pace Pitch Deck" class="w-full">
+                        </div>
+                        <p class="text-secondary">Professional pitch deck for an innovative youth soccer camp, featuring dynamic visuals and comprehensive program details.</p>
+                    </div>
+                </div>
+
+                <!-- Extermination Pitch Deck -->
+                <div class="mb-24">
+                    <div class="bg-accent p-8 rounded-3xl">
+                        <h3 class="text-2xl font-bold mb-6 tracking-tight">Extermination Project</h3>
+                        <div class="rounded-2xl overflow-hidden mb-6 relative">
+                            <div class="aspect-w-16 aspect-h-9 bg-white flex items-center justify-center p-12">
+                                <a href="/images/Extermination Pitch Deck.pdf" target="_blank" class="flex flex-col items-center text-primary hover:text-primary/70 transition-colors">
+                                    <i class="fas fa-file-pdf text-5xl mb-4"></i>
+                                    <span class="text-sm font-medium">View PDF Presentation</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-secondary">A comprehensive pitch deck detailing the Extermination project vision and execution plan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-32 px-6 bg-accent">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-8 text-center tracking-tight">Services</h2>
+                <p class="text-xl text-secondary mb-16 text-center max-w-2xl mx-auto">
+                    Professional services tailored to your creative and marketing needs.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-pen-fancy text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Pitch Decks</h3>
+                        <p class="text-secondary">Professional and unique pitch decks that showcase your project's vision.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-film text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Screenwriting</h3>
+                        <p class="text-secondary">Compelling stories across drama, comedy, sci-fi, and young adult genres.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl">
+                        <div class="w-12 h-12 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-lightbulb text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 tracking-tight">Consulting</h3>
+                        <p class="text-secondary">Expert advice on storytelling, marketing, and content strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Well-Written Section -->
+        <section id="well-written" class="py-32 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-8 text-center tracking-tight">Well-Written</h2>
+                <p class="text-xl text-secondary mb-16 text-center max-w-2xl mx-auto">
+                    A writer's group focused on the tools of writing, wellness, and support.
+                </p>
+
+                <div class="bg-accent p-8 rounded-3xl">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-secondary mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-primary focus:border-primary bg-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-secondary mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-primary focus:border-primary bg-white">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-secondary mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-primary focus:border-primary bg-white">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-secondary mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-primary focus:border-primary bg-white"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-4 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors text-sm">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-center">Let's Connect</h2>
+                <p class="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+                    Interested in collaborating or learning more about my work? Feel free to reach out!
+                </p>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-primary focus:border-primary">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-4 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center">
+        <div class="relative w-full max-w-4xl mx-4">
+            <button onclick="closeVideoModal()" class="absolute -top-10 right-0 text-white hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <video id="videoPlayer" class="w-full rounded-xl" controls>
+                <source src="/images/Sisters Pitch Deck.mov" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Additional Video Modal for Sisters Pitch -->
+    <div id="sistersPitchModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center">
+        <div class="relative w-full max-w-4xl mx-4">
+            <button onclick="closeSistersPitchVideo()" class="absolute -top-10 right-0 text-white hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <video id="sistersPitchPlayer" class="w-full rounded-xl" controls>
+                <source src="/images/Sisters Pitch Deck.mov" type="video/quicktime">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Make sure video elements are loaded before adding event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoModal = document.getElementById('videoModal');
+            const sistersPitchModal = document.getElementById('sistersPitchModal');
+            const mainVideo = document.getElementById('videoPlayer');
+            const sistersVideo = document.getElementById('sistersPitchPlayer');
+
+            function openVideoModal() {
+                videoModal.classList.remove('hidden');
+                mainVideo.play().catch(function(error) {
+                    console.log("Video play failed:", error);
+                });
+            }
+
+            function closeVideoModal() {
+                videoModal.classList.add('hidden');
+                mainVideo.pause();
+                mainVideo.currentTime = 0;
+            }
+
+            function openSistersPitchVideo() {
+                sistersPitchModal.classList.remove('hidden');
+                sistersVideo.play().catch(function(error) {
+                    console.log("Video play failed:", error);
+                });
+            }
+
+            function closeSistersPitchVideo() {
+                sistersPitchModal.classList.add('hidden');
+                sistersVideo.pause();
+                sistersVideo.currentTime = 0;
+            }
+
+            // Make functions globally available
+            window.openVideoModal = openVideoModal;
+            window.closeVideoModal = closeVideoModal;
+            window.openSistersPitchVideo = openSistersPitchVideo;
+            window.closeSistersPitchVideo = closeSistersPitchVideo;
+
+            // Close modals when clicking outside
+            videoModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeVideoModal();
+                }
+            });
+
+            sistersPitchModal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeSistersPitchVideo();
+                }
+            });
+
+            // Close modals with ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeVideoModal();
+                    closeSistersPitchVideo();
+                }
+            });
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-accent">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-secondary mb-6">© 2025 Taren. All rights reserved.</p>
+            <div class="flex justify-center space-x-8">
+                <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                    <i class="fab fa-linkedin text-xl"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+                <a href="#" class="text-primary hover:text-primary/70 transition-colors">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+</html>
